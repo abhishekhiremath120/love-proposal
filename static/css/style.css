@@ -1,0 +1,289 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+.hero,
+.create-container,
+.proposal-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.hero-card,
+.form-card,
+.proposal-card,
+.success-card {
+    width: 100%;
+    max-width: 520px;
+    padding: 45px 35px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.96);
+    color: #333;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.heart-icon {
+    font-size: 70px;
+    margin-bottom: 15px;
+    animation: heartbeat 1.3s infinite;
+}
+
+.big-heart {
+    font-size: 80px;
+    animation: heartbeat 1.3s infinite;
+}
+
+h1 {
+    margin: 10px 0;
+    color: #e83e6f;
+    font-size: 38px;
+}
+
+.hero-card p,
+.subtitle {
+    color: #777;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.main-button,
+.yes-button,
+.no-button {
+    border: none;
+    border-radius: 50px;
+    padding: 15px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.main-button {
+    display: inline-block;
+    text-decoration: none;
+    background: #e83e6f;
+    color: white;
+    margin-top: 20px;
+}
+
+.main-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(232, 62, 111, 0.4);
+}
+
+.small-text {
+    margin-top: 25px;
+    color: #999;
+    font-size: 13px;
+}
+
+form {
+    text-align: left;
+    margin-top: 30px;
+}
+
+label {
+    display: block;
+    margin: 18px 0 8px;
+    font-weight: bold;
+    color: #444;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #eee;
+    border-radius: 15px;
+    outline: none;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #e83e6f;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+form .main-button {
+    width: 100%;
+}
+
+#message {
+    margin-top: 20px;
+    color: #e83e6f;
+    font-weight: bold;
+}
+
+.for-text {
+    color: #999;
+    margin-bottom: 0;
+}
+
+.question {
+    margin: 30px 0;
+    padding: 25px;
+    border-radius: 20px;
+    background: #fff0f4;
+    color: #e83e6f;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.love-text {
+    color: #777;
+}
+
+.buttons {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    min-height: 60px;
+}
+
+.yes-button {
+    background: #e83e6f;
+    color: white;
+}
+
+.no-button {
+    background: #eee;
+    color: #555;
+}
+
+.yes-button:hover {
+    transform: scale(1.08);
+}
+
+.success-card h1 {
+    font-size: 40px;
+}
+
+.success-card p {
+    color: #777;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.celebration {
+    font-size: 35px;
+    margin: 20px 0;
+}
+
+.big-love {
+    font-size: 100px;
+    animation: heartbeat 1.2s infinite;
+}
+
+.forever {
+    color: #e83e6f !important;
+    font-weight: bold;
+}
+
+.floating-heart {
+    position: fixed;
+    bottom: -50px;
+    font-size: 25px;
+    animation: floatHeart 5s linear forwards;
+    pointer-events: none;
+}
+
+.hearts span {
+    position: fixed;
+    bottom: -50px;
+    font-size: 25px;
+    animation: floatHeart 8s linear infinite;
+}
+
+.hearts span:nth-child(1) {
+    left: 10%;
+}
+
+.hearts span:nth-child(2) {
+    left: 30%;
+    animation-delay: 2s;
+}
+
+.hearts span:nth-child(3) {
+    left: 50%;
+    animation-delay: 4s;
+}
+
+.hearts span:nth-child(4) {
+    left: 70%;
+    animation-delay: 1s;
+}
+
+.hearts span:nth-child(5) {
+    left: 90%;
+    animation-delay: 3s;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-card,
+    .form-card,
+    .proposal-card,
+    .success-card {
+        padding: 35px 22px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .question {
+        font-size: 21px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .yes-button,
+    .no-button {
+        width: 100%;
+    }
+}
