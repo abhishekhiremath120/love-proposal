@@ -19,7 +19,7 @@ async def proposal(request: Request):
         request=request,
         name="proposal.html",
         context={
-            "name": "Vaibhavi",
+            "name": "Nirikshita",
             "question": "Will you marry me?"
         }
     )
